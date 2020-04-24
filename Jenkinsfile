@@ -6,10 +6,10 @@ pipeline {
                 stage('print values') {
                         steps {
                                 echo "Hello ${params.NAME}"
-                                echo "Your Biography: ${params.BIO}"
-                                echo "Your choice is: ${params.CHOICE}"
-                                echo "Your boolean choice is: ${params.BOOLEAN}"
-                                echo "your password is: ${params.PASSWORD}"
+                                echo "Your Biography : ${params.BIO}"
+                                echo "Your choice is : ${params.CHOICE}"
+                                echo "Your boolean choice is : ${params.BOOLEAN}"
+                                echo "your password is : ${params.PASSWORD}"
                         }
                 }
         }
