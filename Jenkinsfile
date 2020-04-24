@@ -14,7 +14,7 @@ pipeline{
                     timeout(time :1, unit: "MINUTES")
                 }
             steps {
-                sh "printf executing step 1"
+                sh 'printf "\\e[31mexecuting step1\\e[0m\\n"'"
             }
         }
         stage('stage2')
@@ -24,7 +24,7 @@ pipeline{
                     timeout(time :2, unit: "MINUTES")
                 }
             steps {
-                sh "printf executing step 2"
+                     sh 'printf "\\e[31mexecuting step2\\e[0m\\n"'
             }
         }
     }
