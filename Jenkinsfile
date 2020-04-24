@@ -1,15 +1,23 @@
 pipeline {
         agent any
         stages {
-                stage('stage1') {
+                stage('devmaster') {
+                        when {
+                                anyOf {
+                                        branch 'master'; branch 'development'
+                                }
+                        }
                         steps {
-                                echo 'This is normal stage'
+                               echo 'I am either mater or development branch'
                         }
                 }
-        }
-        post {
-                failure {
-                        echo 'This is post build step'
+                stage('master') {
+                        when {
+                                branch 'master'
+                        }
+                        steps {
+                                echo 'I am master'
+                        }
                 }
         }
 }
